@@ -1,7 +1,7 @@
 ﻿var SewerInspectionView = function() {
 
     this.initialize = function() {
-        this.el = $('</div>');
+        this.el = $('<div/>');
         this.el.on('click', '.add-pic-btn', this.addPicture);
     };
 

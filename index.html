@@ -11,7 +11,7 @@
             </div>
             <div>
                 <div class='search-bar'>
-                    <input class='search-key' type="search" />
+                    <h1 class='search-key'></h1>
                 </div>
                 <div class="scroll">
                     <ul class='employee-list'>
@@ -19,6 +19,7 @@
                         <li><a href="#SewerInspection" class="button">Manhole Cover Inspection</a></li>
                     </ul>
                 </div>
+            </div>
         </script>
 
         <script id="employee-li-tpl" type="text/x-handlebars-template">
@@ -29,10 +30,14 @@
             {{/.}}
         </script>
 
-        <script id="sewer-lateral-inspection-tpl" type="text/x-handlerbars-template">
+        <script id="sewer-lateral-inspection-tpl" type="text/x-handlebars-template">
             <div class='header'>
                 <h1>Sewer Lateral Inspection and Data Collection Form</h1>
-                <li><a href="#" class="change-pic-btn">Change Picture</a></li>
+            </div>
+            <div class="scroll">
+                <ul>
+                    <li><a href="#" class="change-pic-btn">Change Picture</a></li>
+                </ul>
             </div>
         </script>
         <script id="employee-tpl" type="text/x-handlebars-template">
@@ -65,6 +70,7 @@
     <script src="js/storage/memory-store.js"></script>
     <script src="js/HomeView.js"></script>
     <script src="js/EmployeeView.js"></script>
+    <script src="js/SewerInspectionView.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

@@ -8,17 +8,17 @@ var app = {
         }
     },
 
-    registerEvents: function() {
+    registerEvents: function () {
         $(window).on('hashchange', $.proxy(this.route, this));
-        $('body').on('mousedown', 'a', function(event) {
+        $('body').on('mousedown', 'a', function (event) {
             $(event.target).addClass('tappable-active');
         });
-        $('body').on('mouseup', 'a', function(event) {
+        $('body').on('mouseup', 'a', function (event) {
             $(event.target).removeClass('tappable-active');
         });
     },
 
-    route: function() {
+    route: function () {
         var self = this;
         var hash = window.location.hash;
         if (!hash) {
@@ -32,21 +32,25 @@ var app = {
         }
         var match = hash.match(this.detailsURL);
         if (match) {
-            this.store.findById(Number(match[1]), function(employee) {
+            this.store.findById(Number(match[1]), function (employee) {
                 self.slidePage(new EmployeeView(employee).render());
             });
         }
+        match = hash.match(this.SewerInspectionURL);
+        if (match) {
+            self.slidePage(new SewerInspectionView().render());
+        }
     },
 
-    slidePage: function(page) {
+    slidePage: function (page) {
 
         var currentPageDest,
             self = this;
 
         // If there is no current page (app just started) -> No transition: Position new page in the view port
         if (!this.currentPage) {
-            $(page.el).attr('class', 'page stage-center');
-            $('body').append(page.el);
+            $('#pageContent').attr('class', 'page stage-center');
+            $('#pageContent').append(page.el);
             this.currentPage = page;
             return;
         }
@@ -64,10 +68,10 @@ var app = {
             currentPageDest = "stage-left";
         }
 
-        $('body').append(page.el);
+        $('#pageContent').append(page.el);
 
         // Wait until the new page has been added to the DOM...
-        setTimeout(function() {
+        setTimeout(function () {
             // Slide out the current page: If new page slides from the right -> slide current page to the left, and vice versa
             $(self.currentPage.el).attr('class', 'page transition ' + currentPageDest);
             // Slide in the new page
@@ -77,11 +81,12 @@ var app = {
 
     },
 
-    initialize: function() {
+    initialize: function () {
         var self = this;
         this.detailsURL = /^#employees\/(\d{1,})/;
+        this.SewerInspectionURL = /#SewerInspection/;
         this.registerEvents();
-        this.store = new MemoryStore(function() {
+        this.store = new MemoryStore(function () {
             self.route();
         });
     }
