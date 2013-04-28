@@ -1,0 +1,191 @@
+﻿body {
+}
+
+.editor-sectionTitle {
+    border: 1px solid #787878;
+    padding: 10px 5px;
+    font-weight: bold;
+    color: black;
+    font-size: larger;
+    background-color: #EDEDED;
+}
+
+.editor-inlineSectionTitle {
+    border-top-width: 0px;
+}
+
+.editor-separatedSectionTitle {
+    margin-top: 20px;
+}
+
+.editor-sectionTitle h3 {
+    margin: 0px;
+    text-transform: none;
+    font-weight: bold;
+}
+
+.editor-label {
+    border: 1px solid #787878;
+    margin: 0px;
+    padding: 8px 5px;
+    color: #333;
+    font-weight: bold;
+    border-top-width: 0px;
+}
+
+.editor-label-separated {
+    border-top-width: 1px;
+    margin-top: 20px;
+}
+
+.editor-field {
+    border: 1px solid #787878;
+    margin: 0px;
+    padding: 0px;
+    border-top-width: 0px;
+}
+
+input.single-line {
+    font-size: 1em;
+}
+
+.radiobuttons {
+    min-width: 150px;
+}
+
+.radiobuttons span {
+    white-space: nowrap;
+}
+
+.editor-field textarea, .sectionTable textArea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5px;
+    resize: vertical;
+    vertical-align: top;
+    border: 0px;
+    font-size: 1em;
+    margin-bottom: 1px;
+}
+
+.editor-table {
+    border: 1px solid #787878;
+    margin: 0px;
+    padding: 0px;
+    border-top-width: 0px;
+    overflow: auto;
+    color: #333;
+}
+
+.editor-table p {
+    padding: 5px;
+    font-weight: bold;
+    margin: 5px 0px;
+}
+
+.editor-table table {
+    width: 100%;
+}
+
+.editor-table input[type=checkbox] {
+    vertical-align: middle;
+    margin: 3px 3px 3px 8px;
+}
+
+.editor-table textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.editor-table .textarea-container {
+    margin: 5px 10px 5px 28px;
+    padding: 0px;
+}
+
+.editor-table label {
+    vertical-align: middle;
+}
+
+table.sectionTable {
+    width: 100%;
+}
+
+table.sectionTable, table.sectionTable th, table.sectionTable td, 
+table.sectionTable_twoColumn, table.sectionTable_twoColumn th, table.sectionTable_twoColumn td
+ {
+    border: 1px solid #787878;
+    color: #333;
+}
+
+table.sectionTable thead th {
+    background-color: transparent;
+}
+
+table.sectionTable td {
+    padding: 0px;
+}
+
+table.sectionTable textArea.text-box {
+    min-height: 30px;
+    height: 3.5em;
+    min-width: 150px;
+}
+
+table.sectionTable .tall-row textarea.text-box {
+    height: 8em;
+}
+
+table.sectionTable_twoColumn {
+    width: 48%;
+    display: inline-block;
+    vertical-align: top;
+    border: 0;
+}
+
+table.sectionTable_twoColumn input[type="text"] {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.table-noborder, .table-noborder td, .table-noborder th {
+    border: 0px;
+}
+
+.signature-block 
+{
+    display: inline-block;
+    margin: 10px;
+}
+
+.signature-block p {
+    text-align: center;
+}
+
+#footnotes {
+    margin: 20px 0;
+}
+
+#footnotes td {
+    padding-right: 0px;
+    padding-left: 3px;
+    text-align: right;
+}
+
+.footnote {
+    margin: 3px;
+    text-align: left;
+}
+
+table#part3checklist td {
+    padding: 5px;
+}
+
+table#part3checklist td.last {
+    padding: 0px;
+    padding-bottom: 1px; /*stops the textarea from blocking the bottom border*/
+}
+
+table#part3checklist textarea.text-box {
+    min-height: 30px;
+    height: 5.8em;
+}

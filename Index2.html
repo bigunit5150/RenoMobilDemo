@@ -1,0 +1,190 @@
+﻿<html>
+<head>
+    <title>Reno Mobil Demo</title>
+
+    <link rel="stylesheet" href="http://nevadadot.com/core/css/reset.css" />
+    <link rel="stylesheet" href="http://nevadadot.com/core/css/webfonts.css" />
+    <link rel="stylesheet" href="http://nevadadot.com/core/css/screen.css?v=1" />
+    <link rel="stylesheet" href="http://nevadadot.com/core/css/contentEntry.css" />
+    <link rel="stylesheet" href="http://nevadadot.com/core/menus/megaMenu/megaMenu.css" />
+    <link rel="stylesheet" href="http://nevadadot.com/core/menus/slaveMenu/slave.css" />
+    <link rel="stylesheet" href="http://nevadadot.com/core/css/fancybox-1.3.4.css" />
+
+    <link href="http://nevadadot.com/core/css/base.css" rel="stylesheet" type="text/css" media="handheld, only screen and (max-device-width: 480px)" />
+    <link href="http://nevadadot.com/core/css/smartphone.css?v=1" rel="stylesheet" type="text/css" media="only screen and (max-device-width: 600px)" />
+    <link rel="stylesheet" media="print" href="http://nevadadot.com/core/css/print.css" />
+    <link rel="stylesheet" href="http://nevadadot.com/core/css/contentEntry.css?v=2" />
+
+
+    <link href="Content/Site.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="container" class="application">
+        <div class="masthead">
+            <div class="utility">
+                <div class="inner section">
+                    <span class="access">
+                        <a href="#content">skip to content</a>
+                    </span>
+                    <a id="nv-gov" href="http://nv.gov" target="_blank">state of nevada</a>
+                    <ul class="nav-utility hlist">
+                        <li><a href="http://nevadadot.com/">Home</a></li>
+                        <li><a href="http://nevadadot.com/about/">About NDOT</a></li>
+                        <li><a href="http://nevadadot.com/news/">News</a></li>
+                        <li><a href="http://www.nevadadot.com/about/employment/">Careers</a></li>
+                        <li><a href="http://nevadadot.com/documents/">Documents</a></li>
+                        <li><a href="http://nevadadot.com/sitemap/">Site Map</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="inner">
+                <div id="site-branding">
+                    <a href="http://nevadadot.com" class="logo" title="back to home page">
+                        <img src="http://nevadadot.com/core/images/content/logo_ndot-trans.png" alt="site logo" /></a>
+                </div>
+            </div>
+            <div class="nav-main">
+                <div class="inner clear section">
+                    <a id="icon-511" href="http://www.nvroads.com">
+                        <img src="http://nevadadot.com/core/images/content/logo_511-sm.gif" /></a>
+                    <ul id="nav-main" class="hlist">
+                        <li><a href="http://nevadadot.com/Traveler_Info/Traveler_Information.aspx">Traveler Info/Maps</a></li>
+                        <li><a href="http://nevadadot.com/business/">Doing BusinesS</a></li>
+                        <li><a href="http://www.nevadadot.com/Projects_and_Programs/Projects_and_Programs.aspx">Projects/Programs</a></li>
+                        <li><a href="http://nevadadot.com/Public_Involvement/Public_Involvement.aspx">Public Involvement/Meetings</a></li>
+                        <li class="contact ko"><a href="http://nevadadot.com/Contact_Us/Contact_Us.aspx">contact ndot</a></li>
+                        <!--                <li><a class="contact ko" href="http://nevadadot.com/Contact_Us/Contact_Us.aspx">contact ndot</a></li>		-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="inner section">
+            <!-- *** insert any header content or branding items that you want to display outside the white panel here *** -->
+
+
+            <!-- end editable header/branding region -->
+        </div>
+
+
+        <div id="content" class="inner content-wrapper section wider-section">
+            <!-- This ENDING "</div>" TAG for the 'Content' div tag above, is at the top of the Footer.htm file. -->
+            <div id="pageTitle">
+                <h1>Planning Portal</h1>
+            </div>
+            <div id="pageMenu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                </ul>
+            </div>
+            <div id="pageSectionTitle">
+                <h2>CMMS Mobil App</h2>
+            </div>
+            <div id="pageContent">
+                <script id="home-tpl" type="text/x-handlebars-template">
+                    <div class='search-bar'>
+                        <input class='search-key' type="search" /></div>
+                    <div class="scroll">
+                        <ul class='employee-list'></ul>
+                    </div>
+                </script>
+
+                <script id="employee-li-tpl" type="text/x-handlebars-template">
+                    {{#.}}
+   
+                    <li><a href="#employees/{{this.id}}">{{this.firstName}} {{this.lastName}}<br />
+                        {{this.title}}</a></li>
+                    {{/.}}
+                </script>
+
+                <script id="employee-tpl" type="text/x-handlebars-template">
+                    <div class='header'><a href='#' class="button header-button header-button-left">Back</a><h1>Details</h1>
+                    </div>
+                    <div class='details'>
+                        <img id='image' src='img/{{firstName}}_{{lastName}}.jpg' style="float: left; margin: 10px;" />
+                        <h1>{{firstName}} {{lastName}}</h1>
+                        <h2>{{title}}</h2>
+                        <span class="location"></span>
+                        <ul>
+                            <li><a href="tel:{{officePhone}}">Call Office<br />
+                                {{officePhone}}</a></li>
+                            <li><a href="tel:{{cellPhone}}">Call Cell<br />
+                                {{cellPhone}}</a></li>
+                            <li><a href="sms:{{cellPhone}}">SMS<br />
+                                {{cellPhone}}</a></li>
+                            <li><a href="#" class="add-location-btn">Add Location</a></li>
+                            <li><a href="#" class="add-contact-btn">Add to Contacts</a></li>
+                            <li><a href="#" class="change-pic-btn">Change Picture</a></li>
+                        </ul>
+                    </div>
+                </script>
+            </div>
+            <!-- end editable page region -->
+            <!-- The BEGINNING "<div>" TAG for the Content' div tag, is at the bottom of the Header.htm file. -->
+        </div>
+        <!-- -->
+
+        <div class="footer">
+            <div class="inner section">
+                <div class="vcard column">
+                    <h3 class="fn org">NEVADA DEPARTMENT OF TRANSPORTATION</h3>
+                    <div class="address">
+                        <span class="street-address">1263 South Stewart Street</span>, 
+                        <span class="locality">Carson City</span>
+                        <span class="region">Nevada</span>
+                        <span class="postal-code">89712</span>
+                    </div>
+                    <div>
+                        <span class="tel">Telephone: <span class="value">775-888-7000</span></span>
+                        <span class="fax">TTY: <span class="value">1-855-878-NDOT (6368)</span></span>
+                    </div>
+                    <div>
+                        <span class="email">Email: <a class="value context" href="mailto:info@dot.state.nv.us">info@dot.state.nv.us</a></span>
+                        &nbsp; &nbsp; &nbsp; <a class="url context" href="http://nv.gov">Visit NV.gov</a>
+                    </div>
+                </div>
+
+                <div class="officials column last">
+                    <a href="http://nv.gov">
+                        <img src="http://nevadadot.com/core/images/content/seal_NV.gif" alt="Official Seal of the State of Nevada" /></a>
+                    <div>
+                        <span><em><strong>Brian Sandoval</strong>  - Governor</em></span>
+                        <span><em><strong>Rudy Malfabon, P.E.</strong> - Director</em></span>
+
+                        <span class="copyright small-text">Copyright &copy;
+
+                            <script type="text/javascript">
+                                var d = new Date();
+                                document.write(d.getFullYear());
+                            </script>
+                            Nevada Department of Transportation
+                            <br />
+                            <a href="http://nv.gov/privacy-policy/">Nevada Privacy Policy</a>
+                        </span>
+                    </div>
+                </div>
+
+                <ul class="nav-utility hlist">
+                    <li><a href="http://nevadadot.com/">Home</a></li>
+                    <li><a href="http://nevadadot.com/about/">About NDOT</a></li>
+                    <li><a href="http://nevadadot.com/news/">News</a></li>
+                    <li><a href="http://nevadadot.com/careers/">Careers</a></li>
+                    <li><a href="http://nevadadot.com/documents/">Documents</a></li>
+                    <li><a href="http://nevadadot.com/sitemap/">Site Map</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+<script src="phonegap.js"></script>
+<script src="lib/jquery-1.8.2.min.js"></script>
+<script src="lib/handlebars.js"></script>
+<script src="js/storage/memory-store.js"></script>
+<script src="js/HomeView.js"></script>
+<script src="js/EmployeeView.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

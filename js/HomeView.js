@@ -7,7 +7,7 @@ var HomeView = function(store) {
     };
 
     this.render = function() {
-        this.el.html(HomeView.template());
+        $('#pageContent').html(HomeView.template());
         return this;
     };
 

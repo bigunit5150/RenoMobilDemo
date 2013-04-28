@@ -1,0 +1,495 @@
+﻿body {
+}
+
+
+
+.table-noborder, .table-noborder td, .table-noborder th {
+    border: 0px;
+}
+
+.block {
+    display: inline-block;
+    margin-bottom: 1px;
+}
+
+.field-space {
+    margin-right: 20px;
+}
+
+div.field-top-space, table.field-top-space {
+    margin-top: 20px;
+}
+
+div.extra-bottom-padding {
+    padding-bottom: 2px;
+}
+
+.inline-field {
+    overflow: auto;
+    height: auto;
+    display: inline-block;
+    width: 40%;
+    margin-right: 20px;
+    margin-top: 10px;
+    padding: 1px;
+    vertical-align: middle;
+}
+
+.inline-field div.editor-label {
+    float: left;
+    margin-top: 3px;
+    margin-right: 10px;
+}
+
+.inline-field div.editor-label label {
+    vertical-align: middle;
+}
+
+.inline-field div.editor-field {
+    
+    margin-bottom: 1px;
+    margin-top: 1px;
+}
+
+.inline-field div.editor-validation {
+    
+}
+
+.inline-field div.dropdownlist-label {
+    margin-top: 0.5em;
+}
+
+.inline-field div.calendar-label {
+    margin-top: 0.7em;
+}
+
+.form_row {
+    display: block;
+}
+
+.full-width {
+    width: 100%;
+    margin-right: 0;
+}
+
+.full-width-field {
+    margin-top: 0px;
+}
+
+.full-width-field input, 
+.full-width-field span.k-dropdown,
+.full-width-field textarea {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.eighty-width {
+    width: 80%;
+}
+
+.eighty-width-field {
+    margin-top: 0px;
+}
+
+.eighty-width-field input,
+.eighty-width-field span.k-dropdown,
+.eighty-width-field textarea {
+    box-sizing: border-box;
+    width: 80%;
+}
+
+
+.label-80 .editor-label {
+    width: 80px;
+}
+
+.label-80 .editor-field {
+    margin-left: 90px;
+}
+
+.label-100 .editor-label {
+    width: 100px;
+}
+
+.label-100 .editor-field {
+    margin-left: 110px;
+}
+
+.label-150 .editor-label {
+    width: 150px;
+}
+
+.label-150 .editor-field {
+    margin-left: 160px;
+}
+
+.label-160 .editor-label {
+    width: 160px;
+}
+
+.label-160 .editor-field {
+    margin-left: 170px;
+}
+
+.label-170 .editor-label {
+    width: 170px;
+}
+
+.label-170 .editor-field {
+    margin-left: 180px;
+}
+
+.label-190 .editor-label {
+    width: 190px;
+}
+
+.label-190 .editor-field {
+    margin-left: 200px;
+}
+
+.label-200 .editor-label {
+    width: 200px;
+}
+
+.label-200 .editor-field {
+    margin-left: 210px;
+}
+
+.label-210 .editor-label {
+    width: 210px;
+}
+
+.label-210 .editor-field {
+    margin-left: 220px;
+}
+
+.label-250 .editor-label {
+    width: 250px;
+}
+
+.label-250 .editor-field {
+    margin-left: 260px;
+}
+
+.label-280 .editor-field {
+    margin-left: 280px;
+}
+
+.label-280 .editor-label {
+    width: 290px;
+}
+
+.label-250 .editor-field {
+    margin-left: 260px;
+}
+
+.label-300 .editor-label {
+    width: 300px;
+}
+
+.label-300 .editor-field {
+    margin-left: 310px;
+}
+
+.label-390 .editor-label {
+    width: 390px;
+}
+
+.label-390 .editor-field {
+    margin-left: 400px;
+}
+
+#p1_container {
+    overflow: auto;
+    padding: 1px;
+}
+
+#p1_container table {
+    width: 100%;
+}
+
+#p1_container table td {
+    padding: 0px;
+}
+
+#p1_container table td.p1-space {
+    padding-right: 10px;
+}
+
+#p1_container .editor-field {
+    margin: 0px;
+}
+
+#p1_column1, #p1_column2{
+    margin-right: 20px;
+}
+
+#p1_column1, #p1_column2 {
+    width: 38%;
+    min-width: 360px;
+    float: left;
+}
+
+#p1_column3 {
+    width: 18%;
+    min-width: 160px;
+    float: left;
+}
+
+.form-row {
+    overflow: auto;
+    margin-bottom: 5px;
+    padding: 1px 0;
+}
+
+.editor-label input[type=checkbox],
+.editor-table input[type=checkbox] {
+    vertical-align: middle;
+    margin: 3px 3px 3px 8px;
+}
+
+.editor-table label {
+    vertical-align: middle;
+}
+
+.editor-table input.single-line {
+    font-size: 1em;
+}
+
+.pif_SectionForm .editor-label,
+.pif_SectionForm .editor-label label, .pif_SectionForm .editor-field input[type=text], 
+.pif_SectionForm .editor-field input[type=tel], .pif_SectionForm .editor-field input[type=email], 
+.pif_SectionForm .editor-field textarea, .pif_SectionForm .editor-field input[type=number],
+.pif_SectionForm .describe-field textarea {
+    font-size: 1em;
+    line-height: 1.4em;
+    height: 1.6em;
+    vertical-align: middle;
+}
+
+.pif_SectionForm .editor-field input[type=tel],
+.pif_SectionForm .editor-field input[type=email],
+.pif_SectionForm .editor-field input[type=number],
+.pif_SectionForm .editor-field input[type=text],
+.pif_SectionForm .editor-field textarea {
+    padding-left: 5px;
+    padding-bottom: 0px;
+}
+
+.pif_SectionForm .editor-field span.k-datepicker {
+    padding: 0;
+}
+
+.groupTitle {
+    overflow: auto;
+    height: auto;
+    margin-top: 1.3em;
+}
+
+.groupTitle h4 {
+    font-weight: bold;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.groupTitle .plaintext {
+    font-weight: normal;
+    color: #696969;
+    text-transform: none;
+}
+
+.groupTitle label {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.groupTitle p {
+    margin: 0.1em 0 0.5em;
+}
+
+.inlineTitle {
+    font-weight: bold;
+    color: black;
+}
+
+.inlineTitle label {
+    font-weight: bold;
+    color: black;
+}
+
+table.sectionTable-twoColumn {
+    width: 47%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+td.first-column {
+    width: 99%;
+}
+
+td.label-cell {
+    font-size: 1em;
+    padding-left: 10px;
+}
+
+.radiobuttons {
+    white-space: nowrap;
+    margin-left: 5px;
+}
+
+.radiobuttons input[type=radio] {
+    margin: 0px;
+    padding: 0px;
+    vertical-align: middle;
+}
+
+.radiobuttons label {
+    font-size: 1em;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.table-checkDescribe {
+    border: 0;
+}
+
+.table-checkDescribe td {
+    border: 0;
+}
+
+.table-checkDescribe td.describe-label {
+    width: 25%;
+    vertical-align: middle;
+}
+
+.table-checkDescribe td.describe-field {
+    width: 74%;
+    padding: 0px;
+}
+
+.table-checkDescribe .check-field label.radio-yes {
+    background-image: url("Images/RightFillTriangleIcon.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    padding-right: 20px;
+    white-space: nowrap;
+}
+
+.table-stakeholders {
+    width: 100%;
+    border: 0px;
+}
+
+.table-stakeholders .cell-label {
+    border: 0px;
+    text-align: right;
+    margin-right: 10px;
+    width: 150px;
+}
+
+.table-stakeholders .cell-field {
+    width: 99%;
+    border: 0px;
+}
+
+.table-stakeholders .cell-field input {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#ProjectRoutes {
+    margin: 40px 0px;
+}
+
+#ProjectRoutes div.k-grid {
+    border: 0;
+}
+
+#ProjectRoutes div.k-grid table {
+    border-bottom-width: 1px;
+    border-right-width: 1px;
+}
+
+#ProjectRoutes div.k-grid table th {
+    font-weight: bold; 
+}
+
+#ProjectRoutes input.text-box {
+    width: 5em;
+}
+
+table#pif_p3-table td.editor-label {
+    
+    vertical-align: middle;
+}
+
+table#pif_p3-table td.editor-field {
+    width: 55px;
+    vertical-align: middle;
+    padding-right: 20px;
+}
+
+#pif_p4C, #pif_p4D, #pif_p4E {
+    width: 100%;
+    font-size: 1em;
+}
+
+#pif_p4B .radiobuttons label, 
+#pif_p4D .radiobuttons label, 
+#pif_p4E .radiobuttons label {
+    font-size: 100%;
+}
+
+#pif_p4B .radio-yes, #pif_p4C td label {
+    background-image: url("Images/RightFillTriangleIcon.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    padding-right: 20px;
+    white-space: nowrap
+}
+
+#pif_p4C input {
+    
+    vertical-align: middle;
+}
+
+#pif_p4D td, #pif_p4E td {
+    min-width: 300px;
+}
+
+#pif_p4D label.radio-yes, #pif_p4E label.radio-yes {
+    padding-right: 20px;
+    white-space: nowrap
+}
+
+.down-arrow label.radio-yes {
+    background-image: url("Images/DownFillTriangleIcon.png");
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    padding-right: 20px;
+    white-space: nowrap
+}
+
+.right-arrow label.radio-yes {
+    background-image: url("Images/RightFillTriangleIcon.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    padding-right: 20px;
+    white-space: nowrap
+}
+
+#pif_p2-accommodation-table td {
+    
+}
+
+#pif_p2-accommodation-table input[type="text"] {
+    width: 400px;
+}
+
+#pif_p2-accommodation-table {
+}
+
+/* AttachPEL page */
+#indexTable th.rowYear {
+    background-color: #AAA;
+}
