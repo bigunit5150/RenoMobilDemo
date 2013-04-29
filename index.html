@@ -31,13 +31,71 @@
         </script>
 
         <script id="sewer-lateral-inspection-tpl" type="text/x-handlebars-template">
-            <div class='header'>
-                <h1>Sewer Lateral Inspection and Data Collection Form</h1>
+             <div class='header'>
+                <a href='#' class="button header-button header-button-left">Back</a><h1>Details</h1>
+                <h2>Sewer Lateral Inspection</h2>
             </div>
             <div class="scroll">
-                <ul>
-                    <li><a href="#" class="change-pic-btn">Change Picture</a></li>
-                </ul>
+                <form>
+                    <fieldset>
+                        <legend>Sewer Lateral Inspection and Data Collection Form</legend>
+                        <div class="control-label">
+                            <label for="InspectorName">Inspector Name</label>
+                        </div>
+                        <div class="controls">
+                            <input class="text-box single-line" data-val="true" data-val-required="The Inspector Name is required." id="InspectorName" name="InspectorName" type="text" value="Keith Smith" />
+                            <span class="field-validation-valid" data-valmsg-for="InspectorName" data-valmsg-replace="true"></span>
+                        </div>  
+                        <div class="control-label">
+                            <label for="InspectionDate">Inspector Date</label>
+                        </div>
+                        <div class="controls">
+                            <input class="date" data-val="true" data-val-required="The Inspection Date is required." id="InspectionDate" name="InspectionDate" type="text" value="05/28/2013"  />
+                            <span class="field-validation-valid" data-valmsg-for="InspectorName" data-valmsg-replace="true"></span>
+                        </div>    
+                        <div class="control-label">
+                            <label for="Street">Street Name</label>
+                        </div>
+                        <div class="controls">
+                            <input class="text-box single-line" data-val="true" data-val-required="The Street is required." id="Street" name="Street" type="text" value="1 Websoft Way" />
+                            <span class="field-validation-valid" data-valmsg-for="Street" data-valmsg-replace="true"></span>
+                        </div>  
+                        <div class="control-label">
+                            <label for="APNNumber">APN #</label>
+                        </div>
+                        <div class="controls">
+                            <input class="text-box single-line" data-val="true" data-val-required="The APN Number is required." id="APNNumber" name="APNNumber" type="number" value=""  />
+                            <span class="field-validation-valid" data-valmsg-for="InspectorName" data-valmsg-replace="true"></span>
+                        </div>   
+                        <div class="control-label">
+                            <label for="GPSMain">GPS Point #; Connection to Main</label>
+                        </div>
+                        <div class="controls">
+                            <input class="text-box single-line" data-val="true" data-val-required="GPS Point Required" id="GPSMain" name="GPSMain" type="number" value="" />
+                            <span class="field-validation-valid" data-valmsg-for="GPSMain" data-valmsg-replace="true"></span>
+                        </div>  
+                        <div class="control-label">
+                            <label for="GPSCleanout">GPS Point #;  Cleanout</label>
+                        </div>
+                        <div class="controls">
+                            <input class="text-box single-line" data-val="true" data-val-required="GPS Point Required" id="GPSCleanout" name="GPSCleanout" type="number" value=""  />
+                            <span class="field-validation-valid" data-valmsg-for="GPSCleanout" data-valmsg-replace="true"></span>
+                        </div>    
+                        <div class="control-label">
+                            <label for="LPipeId">Lateral Pipe Id</label>
+                        </div>
+                        <div class="controls">
+                            <input class="text-box single-line" data-val="true" data-val-required="Lateral Pipe Id required" id="LPipeId" name="LPipeId" type="text" value="" />
+                            <span class="field-validation-valid" data-valmsg-for="LPipeId" data-valmsg-replace="true"></span>
+                        </div>  
+                        <div class="control-label">
+                            <label for="LInstall">Lateral Installation</label>
+                        </div>
+                        <div class="controls">
+                            <input class="checkbox" id="LInstall" name="LInstall" type="checkbox" value=""  />
+                        </div>     
+                    </fieldset>
+                </form>
             </div>
         </script>
         <script id="employee-tpl" type="text/x-handlebars-template">
