@@ -3,6 +3,7 @@
     this.initialize = function() {
         this.el = $('<div/>');
         this.el.on('click', '.add-pic-btn', this.addPicture);
+        this.el.on('click', '#nothing', this.submitForm);
     };
 
     this.render = function() {
@@ -15,7 +16,7 @@
         console.log('addPicture');
         if (!navigator.camera) {
             app.showAlert("Camera API not supported", "Error");
-            return;
+            return true;
         }
         var options = {
             quality: 50,
@@ -35,8 +36,20 @@
 
         return false;
     };
-
-    this.initialize();
+   
+    this.submitForm = function() {
+        $.ajax({
+            url: "http://http://localhost:15607/api/SewerLateralInspectionForm",
+            data: $('#sewerLateralInsectionForm'),
+            type: 'POST',
+            dataType: 'html',
+            success: function(data) {
+                alert(data);
+            }
+        });
+    };
+    
+   this.initialize();
 };
 
 SewerInspectionView.template = Handlebars.compile($("#sewer-lateral-inspection-tpl").html());
