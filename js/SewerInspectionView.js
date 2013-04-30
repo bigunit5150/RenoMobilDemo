@@ -37,14 +37,19 @@
         return false;
     };
    
-    this.submitForm = function() {
+    this.submitForm = function () {
+        var dummy = JSON.stringify($('#sewerLateralInsectionForm').serializeObject());
+        alert(dummy);
         $.ajax({
-            url: "http://http://localhost:15607/api/SewerLateralInspectionForm",
-            data: $('#sewerLateralInsectionForm'),
+            url: "http://localhost:15607/api/SewerLateralInspectionForm",
+            data: dummy,
             type: 'POST',
-            dataType: 'html',
+            contentType: "application/json;charset=utf-8",
             success: function(data) {
                 alert(data);
+            },
+            error: function(hdr, status, exception) {
+                alert(status);
             }
         });
     };
