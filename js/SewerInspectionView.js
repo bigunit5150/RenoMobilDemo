@@ -61,8 +61,8 @@
         console.log('addLocation');
         navigator.geolocation.getCurrentPosition(
             function (position) {
-                $('#GPSCleanout', this.el).html(position.coords.latitude + ',' + position.coords.longitude);
-                $('#GPSMain', this.el).html(position.coords.latitude + ',' + position.coords.longitude);
+                $('#GPSCleanout').val(position.coords.latitude + ',' + position.coords.longitude);
+                $('#GPSMain').val(position.coords.latitude + ',' + position.coords.longitude);
             },
             function () {
                 alert('Error getting location');
