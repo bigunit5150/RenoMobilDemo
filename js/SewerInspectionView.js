@@ -1,17 +1,19 @@
-﻿var SewerInspectionView = function() {
+﻿var SewerInspectionView = function () {
 
-    this.initialize = function() {
+    this.initialize = function () {
         this.el = $('<div/>');
-        this.el.on('click', '.add-pic-btn', this.addPicture);
+        this.el.on('click', '.add-pic-btn', this.takePicture);
         this.el.on('click', '#nothing', this.submitForm);
+        this.el.on('click', '.get-gps-btn', this.getGPS);
+        this.el.on('click', '.take-pic-btn', this.takePicture);
     };
 
-    this.render = function() {
+    this.render = function () {
         this.el.html(SewerInspectionView.template());
         return this;
     };
 
-    this.addPicture = function(event) {
+    this.takePicture = function (event) {
         event.preventDefault();
         console.log('addPicture');
         if (!navigator.camera) {
@@ -26,35 +28,49 @@
         };
 
         navigator.camera.getPicture(
-            function(imageData) {
+            function (imageData) {
                 $('#sewerimage').attr('src', "data:image/jpeg;base64," + imageData);
             },
-            function() {
+            function () {
                 alert('Error taking picture');
             },
             options);
 
         return false;
     };
-   
+
     this.submitForm = function () {
         var dummy = JSON.stringify($('#sewerLateralInsectionForm').serializeObject());
         alert(dummy);
         $.ajax({
-            url: "http://localhost:15607/api/SewerLateralInspectionForm",
+            url: "/api/SewerLateralInspectionForm",
             data: dummy,
             type: 'POST',
             contentType: "application/json;charset=utf-8",
-            success: function(data) {
+            success: function (data) {
                 alert(data);
             },
-            error: function(hdr, status, exception) {
+            error: function (hdr, status, exception) {
                 alert(status);
             }
         });
     };
-    
-   this.initialize();
+
+    this.getGPS = function () {
+        event.preventDefault();
+        console.log('addLocation');
+        navigator.geolocation.getCurrentPosition(
+            function (position) {
+                $('#GPSCleanout', this.el).html(position.coords.latitude + ',' + position.coords.longitude);
+                $('#GPSMain', this.el).html(position.coords.latitude + ',' + position.coords.longitude);
+            },
+            function () {
+                alert('Error getting location');
+            });
+        return false;
+    };
+
+    this.initialize();
 };
 
 SewerInspectionView.template = Handlebars.compile($("#sewer-lateral-inspection-tpl").html());

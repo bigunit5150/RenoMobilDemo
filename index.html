@@ -2,6 +2,7 @@
 <head>
     <script src="css/source-sans-pro.js"></script>
     <link href="css/styles.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
 </head>
 <body>
     <div id="pageContent">
@@ -31,73 +32,100 @@
         </script>
 
         <script id="sewer-lateral-inspection-tpl" type="text/x-handlebars-template">
-             <div class='header'>
+            <div class='header'>
                 <a href='#' class="button header-button header-button-left">Back</a><h1>Details</h1>
                 <h2>Sewer Lateral Inspection</h2>
             </div>
-            <div class="scroll">
-                <form id="sewerLateralInsectionForm">
-                    <fieldset>
-                        <legend>Sewer Lateral Inspection and Data Collection Form</legend>
+            <form id="sewerLateralInsectionForm" class="form-horizontal">
+                <fieldset>
+                    <legend>Sewer Lateral Inspection and Data Collection Form</legend>
+                    <div class="control-group">
                         <div class="control-label">
                             <label for="InspectorName">Inspector Name</label>
                         </div>
                         <div class="controls">
-                            <input class="text-box single-line" data-val="true" data-val-required="The Inspector Name is required." id="InspectorName" name="InspectorName" data-bind="text: InspectorName" />
+                            <input type="text" id="InspectorName" name="InspectorName" />
                             <span class="field-validation-valid" data-valmsg-for="InspectorName" data-valmsg-replace="true"></span>
-                        </div>  
+                        </div>
+                    </div>
+                    <div class="control-group">
                         <div class="control-label">
                             <label for="InspectionDate">Inspector Date</label>
                         </div>
                         <div class="controls">
-                            <input class="date" data-val="true" data-val-required="The Inspection Date is required." id="InspectionDate" name="InspectionDate" type="text" data-bind="text: InspectionDate"  />
+                            <input class="text-box single-line" data-val="true" data-val-required="The Inspection Date is required." id="InspectionDate" name="InspectionDate" type="text"/>
                             <span class="field-validation-valid" data-valmsg-for="InspectionDate" data-valmsg-replace="true"></span>
-                        </div>    
+                        </div>
+                    </div>
+                    <div class="control-group">
+
                         <div class="control-label">
                             <label for="Street">Street Name</label>
                         </div>
                         <div class="controls">
                             <input class="text-box single-line" data-val="true" data-val-required="The Street is required." id="Street" name="Street" type="text" value="1 Websoft Way" />
                             <span class="field-validation-valid" data-valmsg-for="Street" data-valmsg-replace="true"></span>
-                        </div>  
+                        </div>
+                    </div>
+                    <div class="control-group">
+
                         <div class="control-label">
                             <label for="APNNumber">APN #</label>
                         </div>
                         <div class="controls">
-                            <input class="text-box single-line" data-val="true" data-val-required="The APN Number is required." id="APNNumber" name="APNNumber" type="number" value=""  />
+                            <input class="text-box single-line" data-val="true" data-val-required="The APN Number is required." id="APNNumber" name="APNNumber" type="number" value="" />
                             <span class="field-validation-valid" data-valmsg-for="APNNumber" data-valmsg-replace="true"></span>
-                        </div>   
+                        </div>
+                    </div>
+                    <div class="control-group">
+
                         <div class="control-label">
                             <label for="GPSMain">GPS Point #; Connection to Main</label>
                         </div>
                         <div class="controls">
-                            <input class="text-box single-line" data-val="true" data-val-required="GPS Point Required" id="GPSMain" name="GPSMain" type="number" value="" />
+                            <div class="input-prepend">
+                                <span class="add-on"><i class="icon-globe get-gps-btn"></i></span>
+                            </div>
+                            <input class="text-box span2" data-val="true" data-val-required="GPS Point Required" id="GPSMain" name="GPSMain" />
                             <span class="field-validation-valid" data-valmsg-for="GPSMain" data-valmsg-replace="true"></span>
-                        </div>  
+                        </div>
+                    </div>
+                    <div class="control-group">
+
                         <div class="control-label">
                             <label for="GPSCleanout">GPS Point #;  Cleanout</label>
                         </div>
                         <div class="controls">
-                            <input class="text-box single-line" data-val="true" data-val-required="GPS Point Required" id="GPSCleanout" name="GPSCleanout" type="number" value=""  />
-                            <span class="field-validation-valid" data-valmsg-for="GPSCleanout" data-valmsg-replace="true"></span>
-                        </div>    
+                            <div class="input-prepend">
+                                <span class="add-on"><i class="icon-globe get-gps-btn"></i></span>
+                             </div>
+                             <input class="text-box span2" data-val="true" data-val-required="GPS Point Required" id="GPSCleanout" name="GPSCleanout" />
+                             <span class="field-validation-valid" data-valmsg-for="GPSCleanout" data-valmsg-replace="true"></span>
+                        </div>
+                    </div>
+                    <div class="control-group">
+
                         <div class="control-label">
                             <label for="LPipeId">Lateral Pipe Id</label>
                         </div>
                         <div class="controls">
                             <input class="text-box single-line" data-val="true" data-val-required="Lateral Pipe Id required" id="LPipeId" name="LPipeId" type="text" value="" />
                             <span class="field-validation-valid" data-valmsg-for="LPipeId" data-valmsg-replace="true"></span>
-                        </div>  
+                        </div>
+                    </div>
+                    <div class="control-group">
+
                         <div class="control-label">
                             <label for="LInstall">Lateral Installation</label>
                         </div>
                         <div class="controls">
-                            <input class="checkbox" id="LInstall" name="LInstall" type="checkbox" value=""  />
-                        </div>  
-                        <input class="button" id="nothing" name="submit" value="Submit Form" />
-                    </fieldset>
-                </form>
-            </div>
+                            <input class="checkbox" id="LInstall" name="LInstall" type="checkbox" value="" />
+                        </div>
+                    </div>
+                    <input class="add-pic-btn" id="takepic" name="takepic" value="Add Picture" />
+                    <input class="button" id="nothing" name="submit" value="Submit Form" />
+                </fieldset>
+            </form>
         </script>
         <script id="employee-tpl" type="text/x-handlebars-template">
             <div class='header'>
@@ -124,9 +152,10 @@
     </div>
 
     <script src="phonegap.js"></script>
-    <script src="lib/jquery-1.8.2.min.js"></script>
+    <script src="lib/jquery-1.9.1.min.js"></script>
     <script src="lib/handlebars.js"></script>
     <script src="lib/knockout-2.2.1.js"></script>
+    <script src="lib/bootstrap.js"></script>
     <script src="js/storage/memory-store.js"></script>
     <script src="js/HomeView.js"></script>
     <script src="js/EmployeeView.js"></script>
