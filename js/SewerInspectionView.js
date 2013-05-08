@@ -43,14 +43,16 @@
         var dummy = JSON.stringify($('#sewerLateralInsectionForm').serializeObject());
         alert(dummy);
         $.ajax({
-            url: "/api/SewerLateralInspectionForm",
+            url: "http://localhost:5001/api/SewerLateralInspectionForm",
             data: dummy,
             type: 'POST',
+            crossDomain: true,
             contentType: "application/json;charset=utf-8",
             success: function (data) {
                 alert(data);
             },
             error: function (hdr, status, exception) {
+                alert(hdr.responseText);
                 alert(status);
             }
         });
